@@ -22,5 +22,6 @@
                 </div>
             </section>
         </main>
+        <script type="module" src="scripts/theme-toggle.js"></script>
     </body>
 </html>

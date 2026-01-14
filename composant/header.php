@@ -19,6 +19,10 @@
                 <li><a href="#education">Mon CV</a></li>
             </ul>
         </nav>
+        <button type="button" class="app-bar__theme" data-theme-toggle aria-pressed="false">
+            <span class="app-bar__theme-icon" aria-hidden="true">🌙</span>
+            <span class="app-bar__theme-label">Sombre</span>
+        </button>
         <a class="app-bar__cta" href="#contact">Contact</a>
     </div>
 </header>

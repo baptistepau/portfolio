@@ -1,5 +1,8 @@
 :root {
     color-scheme: dark;
+    --bg: radial-gradient(circle at 10% 20%, rgba(197, 255, 74, 0.08), transparent 35%),
+        radial-gradient(circle at 80% 0%, rgba(102, 244, 255, 0.08), transparent 30%),
+        linear-gradient(160deg, #0b1020, #0a0f1c 40%, #0b1424 100%);
     --surface: #0f172a;
     --surface-2: #0b1223;
     --surface-3: #0d172c;
@@ -9,6 +12,34 @@
     --text: #e2e8f0;
     --text-muted: #9aa7bd;
     --shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+    --appbar-bg: rgba(15, 23, 42, 0.72);
+    --appbar-border: rgba(255, 255, 255, 0.06);
+    --appbar-link: #e2e8f0;
+    --appbar-link-hover: rgba(255, 255, 255, 0.06);
+    --ghost-bg: rgba(255, 255, 255, 0.02);
+    --ghost-hover: rgba(255, 255, 255, 0.04);
+}
+
+:root[data-theme="light"] {
+    color-scheme: light;
+    --bg: radial-gradient(circle at 12% 24%, rgba(197, 255, 74, 0.16), transparent 36%),
+        radial-gradient(circle at 86% 6%, rgba(102, 180, 255, 0.16), transparent 34%),
+        linear-gradient(165deg, #f7fbff, #f1f6ff 46%, #e8f1ff 100%);
+    --surface: #f8fbff;
+    --surface-2: #f2f7ff;
+    --surface-3: #e8f1ff;
+    --primary: #b3e033;
+    --primary-soft: rgba(179, 224, 51, 0.18);
+    --outline: rgba(15, 23, 42, 0.08);
+    --text: #0f172a;
+    --text-muted: #4b5565;
+    --shadow: 0 24px 60px rgba(15, 23, 42, 0.15);
+    --appbar-bg: rgba(255, 255, 255, 0.82);
+    --appbar-border: rgba(15, 23, 42, 0.06);
+    --appbar-link: #0f172a;
+    --appbar-link-hover: rgba(15, 23, 42, 0.08);
+    --ghost-bg: rgba(15, 23, 42, 0.04);
+    --ghost-hover: rgba(15, 23, 42, 0.08);
 }
 
 * {
@@ -22,9 +53,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background: radial-gradient(circle at 10% 20%, rgba(197, 255, 74, 0.08), transparent 35%),
-        radial-gradient(circle at 80% 0%, rgba(102, 244, 255, 0.08), transparent 30%),
-        linear-gradient(160deg, #0b1020, #0a0f1c 40%, #0b1424 100%);
+    background: var(--bg);
     color: var(--text);
     line-height: 1.6;
     letter-spacing: 0.01em;
@@ -118,14 +147,14 @@ a {
 }
 
 .btn--ghost {
-    background: rgba(255, 255, 255, 0.02);
+    background: var(--ghost-bg);
     border-color: var(--outline);
     color: var(--text);
 }
 
 .btn--ghost:hover {
-    border-color: rgba(255, 255, 255, 0.12);
-    background: rgba(255, 255, 255, 0.04);
+    border-color: var(--outline);
+    background: var(--ghost-hover);
 }
 
 @media (max-width: 720px) {
