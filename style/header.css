@@ -249,6 +249,11 @@
         padding: 8px 12px;
         font-size: 0.9rem;
     }
+
+    .app-bar__cta {
+        padding: 8px 14px;
+        font-size: 0.85rem;
+    }
 }
 
 @media (max-width: 640px) {
@@ -327,10 +332,6 @@
     }
 
     .app-bar__theme-label {
-        display: none;
-    }
-
-    .app-bar__cta {
         display: none;
     }
 }
