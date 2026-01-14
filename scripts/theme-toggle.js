@@ -33,4 +33,45 @@ document.addEventListener('DOMContentLoaded', () => {
             persistTheme(event.matches ? 'light' : 'dark');
         }
     });
+
+    // Menu hamburger
+    const menuToggle = document.querySelector('[data-menu-toggle]');
+    const menu = document.querySelector('[data-menu]');
+    const menuClose = document.querySelector('[data-menu-close]');
+    const menuLinks = menu?.querySelectorAll('a');
+
+    const closeMenu = () => {
+        menuToggle?.classList.remove('active');
+        menu?.classList.remove('active');
+        document.body.style.overflow = '';
+    };
+
+    const openMenu = () => {
+        menuToggle?.classList.add('active');
+        menu?.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    };
+
+    menuToggle?.addEventListener('click', () => {
+        if (menu?.classList.contains('active')) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    });
+
+    // Bouton de fermeture
+    menuClose?.addEventListener('click', closeMenu);
+
+    // Fermer le menu lors du clic sur un lien
+    menuLinks?.forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    // Fermer le menu avec Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && menu?.classList.contains('active')) {
+            closeMenu();
+        }
+    });
 });

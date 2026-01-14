@@ -69,6 +69,13 @@ a {
     padding: 120px 0 96px;
 }
 
+@media (max-width: 640px) {
+    .page {
+        width: min(1100px, 100% - 1.5rem);
+        padding: 80px 0 48px;
+    }
+}
+
 .hero {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01)),
         radial-gradient(circle at 30% 20%, rgba(102, 200, 255, 0.08), transparent 45%),
@@ -164,9 +171,50 @@ a {
 
     .hero {
         padding: 32px;
+        border-radius: 20px;
+        gap: 20px;
     }
 
     .hero h1 {
-        font-size: clamp(2rem, 7vw, 2.6rem);
+        font-size: clamp(1.8rem, 7vw, 2.6rem);
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 24px 20px;
+        border-radius: 16px;
+        gap: 18px;
+    }
+
+    .hero h1 {
+        font-size: clamp(1.6rem, 8vw, 2rem);
+        line-height: 1.15;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .hero__badge {
+        font-size: 0.85rem;
+        padding: 8px 14px;
+    }
+
+    .hero__actions {
+        gap: 10px;
+        width: 100%;
+    }
+
+    .btn {
+        flex: 1 1 calc(50% - 5px);
+        min-width: 140px;
+        padding: 12px 14px;
+        font-size: 0.9rem;
     }
 }
