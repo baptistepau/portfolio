@@ -13,12 +13,16 @@
         <?php include 'composant/header.php'; ?>
         <main class="page">
             <section class="hero">
-                <div class="hero__badge">Material 3 • Expressive</div>
-                <h1>Design audacieux, interactions douces.</h1>
-                <p>Je conçois et développe des expériences web qui mêlent clarté, mouvement et intention. Découvre mes projets, mes compétences et mon parcours.</p>
+                <h1>Etudiant Mastere ESI Option Inteligence en alternance </h1>
+                <p>
+                    Passionné d’informatique depuis le collège, je développe des assistants numériques pour ordinateur, accompagnés d’un écosystème d’applications.
+                    Je suis partisan de l’open source et du monde Linux, que j’utilise au quotidien comme système principal (Fedora Linux).
+                </p>
                 <div class="hero__actions">
-                    <a class="btn btn--primary" href="#projects">Voir mes projets</a>
-                    <a class="btn btn--ghost" href="#education">Mon CV</a>
+                    <a class="btn btn--primary" href="">Voir mes projets</a>
+                    <a class="btn btn--primary" href="">Mes compétences</a>
+                    <a class="btn btn--ghost" href="">Mon CV</a>
+                    <a class="btn btn--ghost" href="">Me Contacter</a>
                 </div>
             </section>
         </main>

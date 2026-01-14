@@ -86,7 +86,7 @@
 }
 
 .app-bar__nav a:focus-visible {
-    outline: 2px solid #c5ff4a;
+    outline: 2px solid var(--primary);
     outline-offset: 4px;
 }
 
@@ -94,22 +94,22 @@
     margin-left: 12px;
     padding: 10px 16px;
     border-radius: 14px;
-    background: linear-gradient(120deg, #c5ff4a, #c7f6ff);
+    background: linear-gradient(120deg, #66c8ff, #66d9ff);
     color: #0b0f1a;
     font-weight: 700;
     text-decoration: none;
-    border: 1px solid rgba(197, 255, 74, 0.5);
-    box-shadow: 0 16px 40px rgba(197, 255, 74, 0.28);
+    border: 1px solid rgba(102, 200, 255, 0.5);
+    box-shadow: 0 16px 40px rgba(102, 200, 255, 0.28);
     transition: transform 0.16s ease, box-shadow 0.16s ease;
 }
 
 .app-bar__cta:hover {
     transform: translateY(-1px);
-    box-shadow: 0 22px 52px rgba(197, 255, 74, 0.32);
+    box-shadow: 0 22px 52px rgba(102, 200, 255, 0.32);
 }
 
 .app-bar__cta:focus-visible {
-    outline: 2px solid #c5ff4a;
+    outline: 2px solid var(--primary);
     outline-offset: 3px;
 }
 

@@ -1,13 +1,13 @@
 :root {
     color-scheme: dark;
-    --bg: radial-gradient(circle at 10% 20%, rgba(197, 255, 74, 0.08), transparent 35%),
+    --bg: radial-gradient(circle at 10% 20%, rgba(102, 200, 255, 0.08), transparent 35%),
         radial-gradient(circle at 80% 0%, rgba(102, 244, 255, 0.08), transparent 30%),
         linear-gradient(160deg, #0b1020, #0a0f1c 40%, #0b1424 100%);
     --surface: #0f172a;
     --surface-2: #0b1223;
     --surface-3: #0d172c;
-    --primary: #c5ff4a;
-    --primary-soft: rgba(197, 255, 74, 0.14);
+    --primary: #66c8ff;
+    --primary-soft: rgba(102, 200, 255, 0.14);
     --outline: rgba(255, 255, 255, 0.08);
     --text: #e2e8f0;
     --text-muted: #9aa7bd;
@@ -22,14 +22,14 @@
 
 :root[data-theme="light"] {
     color-scheme: light;
-    --bg: radial-gradient(circle at 12% 24%, rgba(197, 255, 74, 0.16), transparent 36%),
-        radial-gradient(circle at 86% 6%, rgba(102, 180, 255, 0.16), transparent 34%),
+    --bg: radial-gradient(circle at 12% 24%, rgba(25, 157, 242, 0.16), transparent 36%),
+        radial-gradient(circle at 86% 6%, rgba(102, 200, 255, 0.16), transparent 34%),
         linear-gradient(165deg, #f7fbff, #f1f6ff 46%, #e8f1ff 100%);
     --surface: #f8fbff;
     --surface-2: #f2f7ff;
     --surface-3: #e8f1ff;
-    --primary: #b3e033;
-    --primary-soft: rgba(179, 224, 51, 0.18);
+    --primary: #199df2;
+    --primary-soft: rgba(25, 157, 242, 0.18);
     --outline: rgba(15, 23, 42, 0.08);
     --text: #0f172a;
     --text-muted: #4b5565;
@@ -71,7 +71,7 @@ a {
 
 .hero {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01)),
-        radial-gradient(circle at 30% 20%, rgba(197, 255, 74, 0.08), transparent 45%),
+        radial-gradient(circle at 30% 20%, rgba(102, 200, 255, 0.08), transparent 45%),
         var(--surface);
     border: 1px solid var(--outline);
     box-shadow: var(--shadow);
@@ -136,14 +136,14 @@ a {
 }
 
 .btn--primary {
-    background: linear-gradient(120deg, var(--primary), #c7f6ff);
+    background: linear-gradient(120deg, var(--primary), #66d9ff);
     color: #0b0f1a;
-    box-shadow: 0 20px 45px rgba(197, 255, 74, 0.25);
+    box-shadow: 0 20px 45px rgba(102, 200, 255, 0.25);
 }
 
 .btn--primary:hover {
     transform: translateY(-1px) scale(1.01);
-    box-shadow: 0 26px 60px rgba(197, 255, 74, 0.32);
+    box-shadow: 0 26px 60px rgba(102, 200, 255, 0.32);
 }
 
 .btn--ghost {

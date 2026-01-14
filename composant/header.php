@@ -12,11 +12,11 @@
         </div>
         <nav class="app-bar__nav">
             <ul>
-                <li><a href="#home">Accueil</a></li>
-                <li><a href="#projects">Projets</a></li>
-                <li><a href="#skills">Compétences</a></li>
-                <li><a href="#experience">Expérience</a></li>
-                <li><a href="#education">Mon CV</a></li>
+                <li><a href="">Accueil</a></li>
+                <li><a href="">Projets</a></li>
+                <li><a href="">Compétences</a></li>
+                <li><a href="">Expérience</a></li>
+                <li><a href="">Mon CV</a></li>
             </ul>
         </nav>
         <button type="button" class="app-bar__theme" data-theme-toggle aria-pressed="false">
