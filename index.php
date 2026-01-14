@@ -20,8 +20,7 @@
                 </p>
                 <div class="hero__actions">
                     <a class="btn btn--primary" href="">Voir mes projets</a>
-                    <a class="btn btn--primary" href="">Mes compétences</a>
-                    <a class="btn btn--ghost" href="">Mon CV</a>
+                    <a class="btn btn--primary" href="https://github.com/baptistepau">Mon GITHUB</a>
                     <a class="btn btn--ghost" href="">Me Contacter</a>
                 </div>
             </section>
