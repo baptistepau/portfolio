@@ -1,34 +1,150 @@
-header {
-    background-color: #202020;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
+.app-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(15, 23, 42, 0.72);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-header img {
-    height: 60px;
+.app-bar__inner {
+    width: min(1100px, 100% - 2rem);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 18px 0;
+}
+
+.app-bar__brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.app-bar__logo {
+    height: 52px;
+    width: 52px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.04);
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.32);
+}
+
+.app-bar__logo img {
+    height: 38px;
     width: auto;
 }
 
-nav {
+.app-bar__text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.app-bar__eyebrow {
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.app-bar__title {
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.app-bar__nav {
     margin-left: auto;
 }
 
-nav ul {
+.app-bar__nav ul {
     list-style: none;
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    gap: 6px;
 }
 
-nav ul li a {
+.app-bar__nav a {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 14px;
+    border-radius: 14px;
+    color: #e2e8f0;
     text-decoration: none;
-    color: #fff;
-    font-weight: 500;
-    transition: color 0.3s;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
 }
 
-nav ul li a:hover {
-    color: #007bff;
+.app-bar__nav a:hover {
+    background: rgba(255, 255, 255, 0.06);
+    color: #f8fafc;
+    transform: translateY(-1px);
+}
+
+.app-bar__nav a:focus-visible {
+    outline: 2px solid #c5ff4a;
+    outline-offset: 4px;
+}
+
+.app-bar__cta {
+    margin-left: 12px;
+    padding: 10px 16px;
+    border-radius: 14px;
+    background: linear-gradient(120deg, #c5ff4a, #c7f6ff);
+    color: #0b0f1a;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1px solid rgba(197, 255, 74, 0.5);
+    box-shadow: 0 16px 40px rgba(197, 255, 74, 0.28);
+    transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.app-bar__cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 22px 52px rgba(197, 255, 74, 0.32);
+}
+
+.app-bar__cta:focus-visible {
+    outline: 2px solid #c5ff4a;
+    outline-offset: 3px;
+}
+
+@media (max-width: 960px) {
+    .app-bar__inner {
+        gap: 14px;
+    }
+
+    .app-bar__nav ul {
+        gap: 4px;
+    }
+
+    .app-bar__nav a {
+        padding: 9px 12px;
+    }
+}
+
+@media (max-width: 760px) {
+    .app-bar__inner {
+        flex-wrap: wrap;
+    }
+
+    .app-bar__nav {
+        width: 100%;
+        order: 3;
+    }
+
+    .app-bar__nav ul {
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .app-bar__cta {
+        margin-left: auto;
+    }
 }
