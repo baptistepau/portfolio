@@ -19,7 +19,6 @@
                 <li><a href="">Projets</a></li>
                 <li><a href="">Compétences</a></li>
                 <li><a href="">Expérience</a></li>
-                <li><a href="">Mon CV</a></li>
             </ul>
         </nav>
         <button type="button" class="app-bar__hamburger" data-menu-toggle aria-label="Menu">
