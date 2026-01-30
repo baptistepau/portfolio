@@ -1,220 +1,189 @@
 :root {
     color-scheme: dark;
-    --bg: radial-gradient(circle at 10% 20%, rgba(102, 200, 255, 0.08), transparent 35%),
-        radial-gradient(circle at 80% 0%, rgba(102, 244, 255, 0.08), transparent 30%),
-        linear-gradient(160deg, #0b1020, #0a0f1c 40%, #0b1424 100%);
-    --surface: #0f172a;
-    --surface-2: #0b1223;
-    --surface-3: #0d172c;
-    --primary: #66c8ff;
-    --primary-soft: rgba(102, 200, 255, 0.14);
-    --outline: rgba(255, 255, 255, 0.08);
-    --text: #e2e8f0;
-    --text-muted: #9aa7bd;
-    --shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
-    --appbar-bg: rgba(15, 23, 42, 0.72);
-    --appbar-border: rgba(255, 255, 255, 0.06);
-    --appbar-link: #e2e8f0;
-    --appbar-link-hover: rgba(255, 255, 255, 0.06);
-    --ghost-bg: rgba(255, 255, 255, 0.02);
-    --ghost-hover: rgba(255, 255, 255, 0.04);
+    /* Palette Dark - Profonde et contrastée */
+    --bg: #000000;
+    --grid-color: rgba(255, 255, 255, 0.05);
+    --surface: rgba(255, 255, 255, 0.03);
+    --surface-2: #050505;
+    --primary: #ffffff;
+    --primary-soft: rgba(255, 255, 255, 0.1);
+    --outline: rgba(255, 255, 255, 0.1);
+    --text: #ffffff;
+    --text-muted: #86868b;
+    --shadow: 0 0 80px rgba(0, 0, 0, 0.8);
+    --appbar-bg: rgba(0, 0, 0, 0.8);
+    --text-gradient: linear-gradient(45deg, #fff, #7d7d7d);
 }
 
 :root[data-theme="light"] {
     color-scheme: light;
-    --bg: radial-gradient(circle at 12% 24%, rgba(25, 157, 242, 0.16), transparent 36%),
-        radial-gradient(circle at 86% 6%, rgba(102, 200, 255, 0.16), transparent 34%),
-        linear-gradient(165deg, #f7fbff, #f1f6ff 46%, #e8f1ff 100%);
-    --surface: #f8fbff;
-    --surface-2: #f2f7ff;
-    --surface-3: #e8f1ff;
-    --primary: #199df2;
-    --primary-soft: rgba(25, 157, 242, 0.18);
-    --outline: rgba(15, 23, 42, 0.08);
-    --text: #0f172a;
-    --text-muted: #4b5565;
-    --shadow: 0 24px 60px rgba(15, 23, 42, 0.15);
-    --appbar-bg: rgba(255, 255, 255, 0.82);
-    --appbar-border: rgba(15, 23, 42, 0.06);
-    --appbar-link: #0f172a;
-    --appbar-link-hover: rgba(15, 23, 42, 0.08);
-    --ghost-bg: rgba(15, 23, 42, 0.04);
-    --ghost-hover: rgba(15, 23, 42, 0.08);
+    /* Palette Light - Propre et minimaliste */
+    --bg: #ffffff;
+    --grid-color: rgba(0, 0, 0, 0.05);
+    --surface: rgba(0, 0, 0, 0.02);
+    --surface-2: #fafafa;
+    --primary: #000000;
+    --primary-soft: rgba(0, 0, 0, 0.05);
+    --outline: rgba(0, 0, 0, 0.1);
+    --text: #1d1d1f;
+    --text-muted: #86868b;
+    --shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    --appbar-bg: rgba(255, 255, 255, 0.8);
+    --text-gradient: linear-gradient(45deg, #1d1d1f, #6e6e73);
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Space Grotesk", "Inter", system-ui, -apple-system, sans-serif;
+    font-family: "SF Pro Display", "Space Grotesk", system-ui, sans-serif;
 }
 
 body {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background: var(--bg);
+    background-color: var(--bg);
     color: var(--text);
-    line-height: 1.6;
-    letter-spacing: 0.01em;
+    line-height: 1.47059;
+    letter-spacing: -0.022em;
+    overflow-x: hidden;
 }
 
-a {
-    color: inherit;
+/* --- Effet de Grille Animée --- */
+body::before {
+    content: '';
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(var(--grid-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 40px 40px;
+    transform: rotate(-15deg);
+    animation: gridMove 20s linear infinite;
+    z-index: -1;
+    pointer-events: none;
+}
+
+@keyframes gridMove {
+    0% { transform: rotate(-15deg) translateY(0); }
+    100% { transform: rotate(-15deg) translateY(40px); }
 }
 
 .page {
-    width: min(1100px, 100% - 2rem);
+    width: min(1200px, 100% - 3rem);
     margin: 0 auto;
-    padding: 120px 0 96px;
+    padding: 140px 0 96px;
 }
 
-@media (max-width: 640px) {
-    .page {
-        width: min(1100px, 100% - 1.5rem);
-        padding: 80px 0 48px;
-    }
-}
-
+/* --- Hero Style Apple --- */
 .hero {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01)),
-        radial-gradient(circle at 30% 20%, rgba(102, 200, 255, 0.08), transparent 45%),
-        var(--surface);
+    background: var(--surface);
     border: 1px solid var(--outline);
-    box-shadow: var(--shadow);
-    padding: 48px;
-    border-radius: 28px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 80px 60px;
+    border-radius: 32px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    backdrop-filter: blur(18px);
+    align-items: center; /* Centrage comme dans ton second style */
+    text-align: center;
+    gap: 32px;
+    box-shadow: var(--shadow);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero:hover {
+    transform: scale(1.01);
 }
 
 .hero__badge {
-    align-self: flex-start;
-    padding: 10px 16px;
+    padding: 8px 16px;
     border-radius: 999px;
-    border: 1px solid var(--outline);
     background: var(--primary-soft);
-    color: var(--text);
-    font-weight: 600;
-    font-size: 0.95rem;
-    letter-spacing: 0.04em;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
+    border: 1px solid var(--outline);
 }
 
 .hero h1 {
-    font-size: clamp(2.4rem, 4vw, 3.2rem);
-    line-height: 1.1;
-    letter-spacing: -0.02em;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    background: var(--text-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow {
+    from { filter: drop-shadow(0 0 10px rgba(255,255,255,0)); }
+    to { filter: drop-shadow(0 0 15px rgba(255,255,255,0.2)); }
 }
 
 .hero p {
     color: var(--text-muted);
-    font-size: 1.05rem;
-    max-width: 720px;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    max-width: 800px;
+    margin: 0 auto;
 }
 
+/* --- Boutons --- */
 .hero__actions {
     display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
 }
 
 .btn {
+    padding: 16px 32px;
+    border-radius: 999px; /* Forme pilule plus Apple */
+    font-size: 1.05rem;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 12px 18px;
-    border-radius: 18px;
-    font-weight: 600;
-    letter-spacing: 0.01em;
-    border: 1px solid transparent;
-    cursor: pointer;
-    text-decoration: none;
-    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, border-color 0.18s ease;
-    will-change: transform;
-}
-
-.btn:focus-visible {
-    outline: 2px solid var(--primary);
-    outline-offset: 3px;
 }
 
 .btn--primary {
-    background: linear-gradient(120deg, var(--primary), #66d9ff);
-    color: #0b0f1a;
-    box-shadow: 0 20px 45px rgba(102, 200, 255, 0.25);
+    background: var(--primary);
+    color: var(--bg);
 }
 
 .btn--primary:hover {
-    transform: translateY(-1px) scale(1.01);
-    box-shadow: 0 26px 60px rgba(102, 200, 255, 0.32);
+    transform: translateY(-2px);
+    opacity: 0.9;
 }
 
 .btn--ghost {
-    background: var(--ghost-bg);
-    border-color: var(--outline);
+    background: transparent;
     color: var(--text);
+    border: 1px solid var(--outline);
 }
 
 .btn--ghost:hover {
-    border-color: var(--outline);
-    background: var(--ghost-hover);
+    background: var(--primary-soft);
 }
 
-@media (max-width: 720px) {
-    .page {
-        padding-top: 96px;
-    }
-
+/* --- Mobile --- */
+@media (max-width: 768px) {
     .hero {
-        padding: 32px;
-        border-radius: 20px;
-        gap: 20px;
+        padding: 40px 24px;
+        border-radius: 24px;
     }
-
-    .hero h1 {
-        font-size: clamp(1.8rem, 7vw, 2.6rem);
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero {
-        padding: 24px 20px;
-        border-radius: 16px;
-        gap: 18px;
-    }
-
-    .hero h1 {
-        font-size: clamp(1.6rem, 8vw, 2rem);
-        line-height: 1.15;
-    }
-
-    .hero p {
-        font-size: 0.95rem;
-        line-height: 1.5;
-    }
-
-    .hero__badge {
-        font-size: 0.85rem;
-        padding: 8px 14px;
-    }
-
+    
     .hero__actions {
-        gap: 10px;
+        flex-direction: column;
         width: 100%;
     }
-
+    
     .btn {
-        flex: 1 1 calc(50% - 5px);
-        min-width: 140px;
-        padding: 12px 14px;
-        font-size: 0.9rem;
+        width: 100%;
+        justify-content: center;
     }
 }
