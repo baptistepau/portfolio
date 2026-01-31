@@ -8,6 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style/main.css">
+        <link rel="stylesheet" href="style/index.css">
     </head>
     <body>
         <?php include 'composant/header.php'; ?>
@@ -19,7 +20,7 @@
                     Je suis partisan de l’open source et du monde Linux, que j’utilise au quotidien comme système principal (Fedora Linux).
                 </p>
                 <div class="hero__actions">
-                    <a class="btn btn--primary" href="">Voir mes projets</a>
+                    <a class="btn btn--primary" href="projet">Voir mes projets</a>
                     <a class="btn btn--primary" href="https://github.com/baptistepau">Mon GITHUB</a>
                     <a class="btn btn--ghost" href="">Me Contacter</a>
                 </div>

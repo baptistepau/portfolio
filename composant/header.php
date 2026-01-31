@@ -15,8 +15,8 @@
                 <span>✕</span>
             </button>
             <ul>
-                <li><a href="">Accueil</a></li>
-                <li><a href="">Projets</a></li>
+                <li><a href="index">Accueil</a></li>
+                <li><a href="projet">Projets</a></li>
                 <li><a href="">Compétences</a></li>
                 <li><a href="">Expérience</a></li>
             </ul>
