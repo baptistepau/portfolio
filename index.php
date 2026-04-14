@@ -27,5 +27,6 @@
             </section>
         </main>
         <script type="module" src="scripts/theme-toggle.js"></script>
+        <?php include 'composant/footer.php'; ?>
     </body>
 </html>

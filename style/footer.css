@@ -1,0 +1,15 @@
+.main-footer {
+    padding: 20px 0;
+    background-color: var(--apple-black);
+    color: var(--apple-white);
+    text-align: center;
+    margin-top: auto; /* Pousse le footer vers le bas */
+    width: 100%;
+    position: relative; /* Assure que le footer reste en bas mÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Âªme avec peu de contenu */
+    bottom: 0;
+}
+
+.copyright {
+    font-size: 14px;
+    opacity: 0.8;
+}
