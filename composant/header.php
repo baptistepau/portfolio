@@ -26,10 +26,11 @@
             <span class="app-bar__hamburger-line"></span>
             <span class="app-bar__hamburger-line"></span>
         </button>
+        <!--
         <button type="button" class="app-bar__theme" data-theme-toggle aria-pressed="false">
             <span class="app-bar__theme-icon" aria-hidden="true">🌙</span>
             <span class="app-bar__theme-label">Sombre</span>
-        </button>
+        </button>-->
         <a class="app-bar__cta" href="#contact">Contact</a>
     </div>
 </header>

@@ -15,23 +15,6 @@
     --text-gradient: linear-gradient(45deg, #fff, #7d7d7d);
 }
 
-:root[data-theme="light"] {
-    color-scheme: light;
-    /* Palette Light - Propre et minimaliste */
-    --bg: #ffffff;
-    --grid-color: rgba(0, 0, 0, 0.05);
-    --surface: rgba(0, 0, 0, 0.02);
-    --surface-2: #fafafa;
-    --primary: #000000;
-    --primary-soft: rgba(0, 0, 0, 0.05);
-    --outline: rgba(0, 0, 0, 0.1);
-    --text: #1d1d1f;
-    --text-muted: #86868b;
-    --shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    --appbar-bg: rgba(255, 255, 255, 0.8);
-    --text-gradient: linear-gradient(45deg, #1d1d1f, #6e6e73);
-}
-
 * {
     margin: 0;
     padding: 0;
