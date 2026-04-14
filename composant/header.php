@@ -17,8 +17,8 @@
             <ul>
                 <li><a href="index">Accueil</a></li>
                 <li><a href="projet">Projets</a></li>
-                <li><a href="">Compétences</a></li>
-                <li><a href="">Expérience</a></li>
+                <li><a href="competences">Compétences</a></li>
+                <li><a href="experience">Expérience</a></li>
             </ul>
         </nav>
         <button type="button" class="app-bar__hamburger" data-menu-toggle aria-label="Menu">
